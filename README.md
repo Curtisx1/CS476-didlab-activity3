@@ -1,57 +1,43 @@
-# Sample Hardhat 3 Beta Project (`node:test` and `viem`)
+# Activity 3 — Build, Deploy & Operate a Production-Style ERC-20 on DIDLab
 
-This project showcases a Hardhat 3 Beta project using the native Node.js test runner (`node:test`) and the `viem` library for Ethereum interactions.
+This document captures key outputs and screenshots from the build & deployment process.
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+---
 
-## Project Overview
+## Token Address
 
-This example project includes:
+<p align="center">
+  <img width="638" height="279" alt="TOKEN_ADDRESS" src="https://github.com/user-attachments/assets/13861b2d-ce67-4bbf-a472-17d42c1d9936" />
+</p>
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using [`node:test`](nodejs.org/api/test.html), the new Node.js native test runner, and [`viem`](https://viem.sh/).
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+---
 
-## Usage
+## Deploy Block
 
-### Running Tests
+<p align="center">
+  <img width="638" height="279" alt="Deploy Block" src="https://github.com/user-attachments/assets/6e34122b-b28a-4910-8992-52b776a7ee16" />
+</p>
 
-To run all the tests in the project, execute the following command:
+---
 
-```shell
-npx hardhat test
-```
+## Roles & Cap
 
-You can also selectively run the Solidity or `node:test` tests:
+<p align="center">
+  <img width="648" height="1139" alt="Roles & Cap" src="https://github.com/user-attachments/assets/25b2f131-c71a-46e0-940b-3fbb566e7f19" />
+</p>
 
-```shell
-npx hardhat test solidity
-npx hardhat test nodejs
-```
+---
 
-### Make a deployment to Sepolia
+## MetaMask Issue (VM is down; unable to set up)
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
+<p align="center">
+  <img width="455" height="666" alt="MetaMask — VM down" src="https://github.com/user-attachments/assets/cdaf37bd-d131-4ca2-960b-1cc78d172858" />
+</p>
 
-To run the deployment to a local chain:
+---
 
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
+## Console Output from `airdrop.ts` (Batch vs Singles Gas)
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
-
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
-
-After setting the variable, you can run the deployment with the Sepolia network:
-
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+<p align="center">
+  <img width="853" height="176" alt="Console output from airdrop.ts" src="https://github.com/user-attachments/assets/0effcdd4-177c-48ae-9731-abc1aef9ba70" />
+</p>
