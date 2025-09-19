@@ -1,7 +1,6 @@
 # Activity 3 — Build, Deploy & Operate a Production-Style ERC-20 on DIDLab
 
-This document captures key outputs and screenshots from the build & deployment process.
-
+I had to run this locally as the VM was down and I could not connect. I attempted to setup Metamask and ran into an issue due to the outage. 
 ---
 
 ## Token Address
