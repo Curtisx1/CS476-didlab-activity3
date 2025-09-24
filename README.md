@@ -1,5 +1,76 @@
 Assignment 3 (Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
 
+For assignment 3 I built upon this project, adding the required files. 
+
+Files created:
+_utils.ts -created to help with the contracts and scripts. This was very helpful in avoiding errors.
+airdropVsSingles.ts -Compares airdropping vs single transactions, specifically GWEI fees
+deploy2.ts -Deploys the CampusCreditV3 contract
+CampusCreditV3.sol -main contract
+logs.ts -Transaction logging script
+transfer-approve2.ts -Transfer and approve transactions
+
+How to run:
+
+Important information:
+
+Team5
+RPC URL: https://hh-05.didlab.org
+Chain ID: 31341
+Token Address: 0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+Deploy:
+npx hardhat run scripts/deploy2.ts --network didlab
+
+Transfer tokens:
+npx hardhat run scripts/transfer-approve2.ts --network didlab
+
+Compare airdrops vs single transactions:
+npx hardhat run scripts/airdropVsSingles.ts --network didlab 
+
+View transaction logs:
+npx hardhat run scripts/logs.ts --network didlab  
+
+
+Console Output
+
+Deploy:
+<img width="642" height="199" alt="2025-09-23 20_53_08- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/06324db8-a856-4320-afe7-859af7df8698" />
+
+Transfer and approve:
+<img width="1000" height="446" alt="2025-09-23 20_54_54- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/14b9647d-cf38-4e48-8b08-90c6693503fa" />
+
+Airdrop Vs Singles
+<img width="690" height="259" alt="2025-09-23 20_55_56- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/aab6ed88-f1af-4eb5-8887-12495a10e71f" />
+
+Logs
+<img width="1008" height="345" alt="2025-09-23 20_56_44- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/d6d53e8f-379c-4e28-90f5-cecd22695e21" />
+
+Metmask
+
+setup network
+<img width="431" height="633" alt="2025-09-23 21_00_17-Mozilla Firefox" src="https://github.com/user-attachments/assets/bb1b4338-4d81-4e44-9c37-dfc6b686483e" />
+
+sent CAMP to Metamask
+<img width="1003" height="449" alt="2025-09-23 21_06_59- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/384ec540-ba0a-4f51-8a4e-1494bbb5cde4" />
+
+received in Metamask
+<img width="429" height="628" alt="2025-09-23 21_07_47-ERC-20 token contract — Mozilla Firefox" src="https://github.com/user-attachments/assets/fe018422-2870-4305-abaf-3ea839a56208" />
+
+sent 100,000 camp :D
+<img width="1018" height="454" alt="2025-09-23 21_08_05- env - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/88f2ca6a-e230-4363-88ca-e8832ed926cb" />
+
+received!
+<img width="434" height="620" alt="2025-09-23 21_08_22-ERC-20 token contract — Mozilla Firefox" src="https://github.com/user-attachments/assets/1a47982c-414b-48a6-a978-e712c50215aa" />
+
+settings
+
+
+
+
+
+
+
 
 
 
