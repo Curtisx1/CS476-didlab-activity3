@@ -1,3 +1,18 @@
+Assignment 3 (Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Activity 3 — Build, Deploy & Operate a Production-Style ERC-20 on DIDLab
 
 I had to run this locally as the VM was down and I could not connect. I attempted to setup Metamask and ran into an issue due to the outage. 
