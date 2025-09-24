@@ -64,6 +64,7 @@ received!
 <img width="434" height="620" alt="2025-09-23 21_08_22-ERC-20 token contract — Mozilla Firefox" src="https://github.com/user-attachments/assets/1a47982c-414b-48a6-a978-e712c50215aa" />
 
 settings
+<img width="411" height="611" alt="image" src="https://github.com/user-attachments/assets/849c0778-6326-473b-8057-fe75dc569b6d" />
 
 
 
