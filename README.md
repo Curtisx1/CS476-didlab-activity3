@@ -74,22 +74,7 @@ npx hardhat run scripts/logs.ts --network didlab
 # settings
 <img width="411" height="611" alt="image" src="https://github.com/user-attachments/assets/849c0778-6326-473b-8057-fe75dc569b6d" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
