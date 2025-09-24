@@ -1,6 +1,18 @@
 # Assignment 3 — Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
 
-For **Assignment 3**, I built upon the base project and added the required files.  
+Short writeup:
+
+For **Assignment 3**, I built upon the base project and added the required files. I added a few environment variables, changing those that were incorrect, and named my new scripts and contract so they can be ran separately. I think the next step is to pull out what was completed in this assignment and either make a new branch in this repo or create a new one entirely. 
+
+Enforcing CAP, PAUSE, and ROLES was done within my .SOL contract: CampusCreditV3.sol. Roles are "MINTER_ROLE", "PAUSER_ROLE", and "DEFAULT_ADMIN_ROLE". These are all given to the deployer, whoever runs deploy2.ts (me). The CAP comes into play when minting during an airdrop. If the total amount of tokens exceeds the CAP, the transaction will be reverted and an error thrown. 
+
+<img width="809" height="702" alt="image" src="https://github.com/user-attachments/assets/2039bde6-a1ca-4ada-8ccc-515861bdb189" />
+
+The airdrop did save a very small amount of gas fees, 0.43%. A small percentage but if this was a part of a large airdrop or done regulary, the saved gas fees would save a lot of WEI. The reason it saves gas fees is because the fee is only paid once per drop. If these were sent individually, a fee would be applied to each transaction.
+
+The main issues I ran into were getting the correct Node modules installed and configured correctly. I avoided a lot of this headache by building upon my existing working project. Creating the _utils.ts script helped a lot with the type errors and import errors I received. The other part was learning about Hardhat and the functions included (transfer, waitForTransactionReceipt, etc.). Originally I had no idea these existed and it required a lot of Googling. 
+
+Setting up Metamask was very straightforward now that the Didlab is back up. It was very cool to see the transfer go through and show up in my wallet.
 
 ---
 
