@@ -7,9 +7,6 @@ import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 import {ERC20Capped} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 
-/// @title BankMintToken (example name) — Capped, Pausable, Burnable ERC20 with AccessControl + batch airdrop
-/// @notice Decimals are standard 18.
-/// @dev Uses OZ v5 (_update hook override).
 contract BankMintToken is ERC20, ERC20Burnable, ERC20Pausable, ERC20Capped, AccessControl {
     // -------- Roles --------
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
@@ -21,7 +18,7 @@ contract BankMintToken is ERC20, ERC20Burnable, ERC20Pausable, ERC20Capped, Acce
 
     /// @param name_ Token name
     /// @param symbol_ Token symbol
-    /// @param cap_ Max total supply (wei units, i.e., 18 decimals)
+    /// @param cap_ Max total supply (wei units, 18 decimals)
     /// @param initialReceiver Address to receive the initial mint
     /// @param initialMint Amount to mint on deploy (wei units)
     constructor(
@@ -36,7 +33,7 @@ contract BankMintToken is ERC20, ERC20Burnable, ERC20Pausable, ERC20Capped, Acce
     {
         require(initialReceiver != address(0), "InvalidReceiver");
 
-        // Grant roles to deployer by default (you can delegate later)
+        // Grant roles to deployer by default
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
@@ -85,7 +82,6 @@ contract BankMintToken is ERC20, ERC20Burnable, ERC20Pausable, ERC20Capped, Acce
 
     // -------- Hooks / Overrides --------
 
-    /// @dev In OZ v5, Pausable & Capped both override _update; we must explicitly override and call super once.
     function _update(address from, address to, uint256 value)
         internal
         override(ERC20, ERC20Pausable, ERC20Capped)

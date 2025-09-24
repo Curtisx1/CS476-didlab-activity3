@@ -8,7 +8,7 @@ import {
   defineChain,
   Hex,
 } from 'viem';
-import { privateKeyToAccount } from 'viem/accounts'; // <-- correct import
+import { privateKeyToAccount } from 'viem/accounts';
 
 import type { Address } from 'viem';
 import fs from 'fs';
@@ -38,7 +38,7 @@ export function fees() {
   return { maxFeePerGas, maxPriorityFeePerGas } as const;
 }
 
-// NEW: build a Chain from your .env (works for any RPC/chainId)
+// Build a Chain from .env 
 export function makeChain() {
   const id = Number(requireEnv('CHAIN_ID'));
   const url = requireEnv('RPC_URL');
@@ -59,7 +59,7 @@ export function makeClients() {
   const transport = http(requireEnv('RPC_URL'));
   const publicClient = createPublicClient({ chain, transport });
 
-  // IMPORTANT: wallet account must be an Account object, not raw hex
+  // wallet account must be an Account object
   const account = privateKeyToAccount(requireEnv('PRIVATE_KEY') as Hex);
   const walletClient = createWalletClient({ chain, account, transport });
 
