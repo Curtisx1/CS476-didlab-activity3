@@ -1,35 +1,42 @@
-Assignment 3 (Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
+# Assignment 3 — Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
 
-For assignment 3 I built upon this project, adding the required files. 
+For **Assignment 3**, I built upon the base project and added the required files.  
 
-Files created:
-_utils.ts -created to help with the contracts and scripts. This was very helpful in avoiding errors.
-airdropVsSingles.ts -Compares airdropping vs single transactions, specifically GWEI fees
-deploy2.ts -Deploys the CampusCreditV3 contract
-CampusCreditV3.sol -main contract
-logs.ts -Transaction logging script
-transfer-approve2.ts -Transfer and approve transactions
+---
 
-How to run:
+## Files Created
 
-Important information:
+- **_utils.ts** — Helper functions for contracts and scripts (avoided errors significantly).  
+- **airdropVsSingles.ts** — Compares airdropping vs single transactions (focus on GWEI fees).  
+- **deploy2.ts** — Deploys the `CampusCreditV3` contract.  
+- **CampusCreditV3.sol** — Main contract.  
+- **logs.ts** — Transaction logging script.  
+- **transfer-approve2.ts** — Handles transfer and approve transactions.  
 
-Team5
-RPC URL: https://hh-05.didlab.org
-Chain ID: 31341
-Token Address: 0x5fbdb2315678afecb367f032d93f642f64180aa3
+---
 
-Deploy:
+## How to Run
+
+### Important Information
+- **Team:** Team5  
+- **RPC URL:** `https://hh-05.didlab.org`  
+- **Chain ID:** `31341`  
+- **Token Address:** `0x5fbdb2315678afecb367f032d93f642f64180aa3`  
+
+### Commands
+```bash
+# Deploy Contract
 npx hardhat run scripts/deploy2.ts --network didlab
 
-Transfer tokens:
+# Transfer Tokens
 npx hardhat run scripts/transfer-approve2.ts --network didlab
 
-Compare airdrops vs single transactions:
-npx hardhat run scripts/airdropVsSingles.ts --network didlab 
+# Compare Airdrops vs Single Transactions
+npx hardhat run scripts/airdropVsSingles.ts --network didlab
 
-View transaction logs:
-npx hardhat run scripts/logs.ts --network didlab  
+# View Transaction Logs
+npx hardhat run scripts/logs.ts --network didlab
+
 
 
 Console Output
