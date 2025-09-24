@@ -9,7 +9,6 @@
     "xfer": "hardhat run scripts/transfer-approve.ts --network didlab",
     "airdrop": "hardhat run scripts/airdrop.ts --network didlab",
     "logs": "hardhat run scripts/logs-query.ts --network didlab"
-
   },
   "keywords": [],
   "author": "",
