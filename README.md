@@ -1,3 +1,16 @@
+# Activity 4— Build a tiny DApp UI for your ERC-20 on DIDLab
+
+I was able to setup the HTML, connect to the network, and send myself 100,000 ETH. However, I could not get the transaction to go through. I am getting an insufficient funds error. Even though I am connected to the right network, show a valid balance and all information is correct. See screenshots below. 
+
+<img width="1017" height="713" alt="2025-09-25 21_06_17-DIDLab — ERC-20 DApp — Mozilla Firefox" src="https://github.com/user-attachments/assets/d254c723-c532-4c0f-98a1-edacfa6456c7" />
+
+
+<img width="467" height="641" alt="2025-09-25 21_06_43-index html - CS476-didlab-activity3 - Visual Studio Code" src="https://github.com/user-attachments/assets/f86a073b-2bc1-4984-801b-7c4c13f01f15" />
+
+
+<img width="451" height="635" alt="2025-09-25 21_07_00-DIDLab — ERC-20 DApp — Mozilla Firefox" src="https://github.com/user-attachments/assets/5c054698-b532-48df-a7c1-94b9af569ab0" />
+
+
 # Assignment 3 — Production-Style ERC-20 on DIDLab (Hardhat v3 + Viem)
 
 Short writeup:
